@@ -4,7 +4,7 @@ const ADMIN_PASSWORD = "150226"; // 您可以修改这个密码
 // 服务器端点 - 使用GitHub Pages来存储数据
 const API_URL = "https://charles-150226.github.io/dai/codes.json";
 const BACKUP_API_URL = "https://api.github.com/repos/charles-150226/dai/contents/codes.json"; // 备用API端点
-const ACCESS_TOKEN = "ghp_7q0w8d3t5y7u9i1o3p5a7s9d1f3g5h7j9k1l3"; // GitHub个人访问令牌
+const ACCESS_TOKEN = "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"; // GitHub个人访问令牌
 
 // 存储已提交的代码
 let submittedCodes = [];
@@ -282,4 +282,5 @@ function escapeHtml(text) {
     };
 
     return text.replace(/[&<>"']/g, m => map[m]);
+
 }
