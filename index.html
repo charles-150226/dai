@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码提交器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>代码提交系统</h1>
+
+        <div id="userSection" class="section">
+            <h2>提交代码</h2>
+            <form id="codeForm">
+                <div class="form-group">
+                    <label for="username">用户名:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">代码标题:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="language">编程语言:</label>
+                    <select id="language" name="language" required>
+                        <option value="">请选择语言</option>
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="java">Java</option>
+                        <option value="c++">C++</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="code">代码内容:</label>
+                    <textarea id="code" name="code" rows="15" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="description">代码描述:</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">提交代码</button>
+            </form>
+        </div>
+
+        <div id="adminSection" class="section">
+            <h2>管理员登录</h2>
+            <div class="form-group">
+                <label for="adminPassword">管理员密码:</label>
+                <input type="password" id="adminPassword" name="adminPassword">
+                <button id="loginBtn" class="btn">登录</button>
+            </div>
+
+            <div id="codeList" class="hidden">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2>已提交的代码</h2>
+                    <button id="logoutBtn" class="btn">退出登录</button>
+                </div>
+                <div id="codesContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
